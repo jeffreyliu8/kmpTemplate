@@ -19,7 +19,7 @@ kotlin {
         }
     }
 
-    androidLibrary {
+    android {
         namespace = "com.jetbrains.kmpapp.shared"
         compileSdk = libs.versions.android.compileSdk.get().toInt()
         minSdk = libs.versions.android.minSdk.get().toInt()
@@ -49,7 +49,9 @@ kotlin {
             implementation(libs.compose.components.resources)
             implementation(libs.compose.uiToolingPreview)
 
-            implementation(libs.navigation.compose)
+            implementation(libs.navigation3.ui)
+            implementation(libs.navigation3.adaptive)
+            implementation(libs.navigation3.lifecycle)
             implementation(libs.androidx.lifecycle.runtimeCompose)
             implementation(libs.compose.material.icons.core)
 
